@@ -8,7 +8,6 @@ namespace API_ECommerce.Interfaces
 
         Cliente BuscarPorId(int id);
 
-        Cliente BuscarPorEmailSenha(string email, string senha);
 
         void Cadastrar(Cliente cliente);
 
