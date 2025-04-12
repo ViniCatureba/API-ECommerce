@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using API_ECommerce.Controllers;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Repositories;
+using API_ECommerce.Models;
 
 namespace API_ECommerce.Controllers
 {
@@ -23,6 +24,19 @@ namespace API_ECommerce.Controllers
         {
             _context = context;
             _clienteRepository = new ClienteRepository(_context);
+        }
+        [HttpGet()]
+        public IActionResult ListarTodos()
+        {
+            return Ok(_clienteRepository.ListarTodos());
+        }
+
+        [HttpPost]
+        public IActionResult CadastrarProduto(Cliente cliente)
+        {
+            _clienteRepository.Cadastrar(cliente);
+            _context.SaveChanges();
+            return Created();
         }
     }
 }

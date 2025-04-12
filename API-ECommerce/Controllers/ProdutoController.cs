@@ -1,5 +1,6 @@
 ﻿using API_ECommerce.Context;
 using API_ECommerce.Interfaces;
+using API_ECommerce.Models;
 using API_ECommerce.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,10 +26,22 @@ namespace API_ECommerce.Controllers
 
 
         // GET
-        [HttpGet]
+        [HttpGet()]
         public IActionResult ListarProdutos()
         {
             return Ok(_produtoRepository.ListarTodos());
+        }
+
+        [HttpPost]
+        public IActionResult CadastrarProduto(Produto prod)
+        {
+            //1 - Coloco o produto no banco de dados
+            _produtoRepository.Cadastrar(prod);
+            //2- Salvo as alterações
+            _context.SaveChanges();
+            //3- Retorno o resultado
+            //201 Created
+            return Created();
         }
     }
 }

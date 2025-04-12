@@ -3,8 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\context\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\context\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\pagamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\repositories\\pagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\repositories\\pagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\repositories\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\repositories\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\interfaces\\ipagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\interfaces\\ipagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|c:\\users\\vinic\\desktop\\c#\\api-ecommerce\\api-ecommerce\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0685A6EC-1B95-44C2-B507-2B562DA24246}|API-ECommerce\\API-ECommerce.csproj|solutionrelative:api-ecommerce\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +58,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "API-ECommerce\\Repositories\\ProdutoRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T22:41:19.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PagamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\PagamentoRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Repositories\\PagamentoRepository.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\PagamentoRepository.cs",
+              "RelativeToolTip": "API-ECommerce\\Repositories\\PagamentoRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:31:30.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "API-ECommerce\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:48:49.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PedidoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\PedidoRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Repositories\\PedidoRepository.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\PedidoRepository.cs",
+              "RelativeToolTip": "API-ECommerce\\Repositories\\PedidoRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wCUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T22:58:01.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PagamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\PagamentoController.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\PagamentoController.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\PagamentoController.cs",
+              "RelativeToolTip": "API-ECommerce\\Controllers\\PagamentoController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:25:09.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EcommerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Context\\EcommerceContext.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Context\\EcommerceContext.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Context\\EcommerceContext.cs",
+              "RelativeToolTip": "API-ECommerce\\Context\\EcommerceContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAC3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T23:32:44.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Program.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Program.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Program.cs",
+              "RelativeToolTip": "API-ECommerce\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T00:38:06.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ProdutoController.cs",
               "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\ProdutoController.cs",
               "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\ProdutoController.cs",
               "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\ProdutoController.cs",
               "RelativeToolTip": "API-ECommerce\\Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:49:01.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "API-ECommerce\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:48:56.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "API-ECommerce\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T22:48:06.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IPagamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Interfaces\\IPagamentoRepository.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Interfaces\\IPagamentoRepository.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Interfaces\\IPagamentoRepository.cs",
+              "RelativeToolTip": "API-ECommerce\\Interfaces\\IPagamentoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T23:28:32.34Z",
+              "WhenOpened": "2025-04-11T23:23:23.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "API-ECommerce\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\vinic\\Desktop\\C#\\API-ECommerce\\API-ECommerce\\Models\\Cliente.cs",
+              "RelativeToolTip": "API-ECommerce\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T23:14:03.597Z",
               "EditorCaption": ""
             }
           ]

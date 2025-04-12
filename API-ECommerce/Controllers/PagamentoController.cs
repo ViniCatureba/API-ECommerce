@@ -19,5 +19,10 @@ namespace API_ECommerce.Controllers
             _context = context;
             _pagamentoRepository = new PagamentoRepository(_context);
         }
+        [HttpGet()]
+        public IActionResult ListarTodos()
+        {
+            return Ok(_pagamentoRepository.ListarTodos());
+        }
     }
 }

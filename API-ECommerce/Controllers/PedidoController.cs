@@ -3,6 +3,7 @@ using API_ECommerce.Repositories;
 using API_ECommerce.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using API_ECommerce.Models;
 
 namespace API_ECommerce.Controllers
 {
@@ -17,6 +18,21 @@ namespace API_ECommerce.Controllers
         {
             _context = context;
             _pedidoRepository = new PedidoRepository(_context);
+        }
+        [HttpGet()]
+        public IActionResult ListarTodos()
+        {
+            return Ok(_pedidoRepository.ListarTodos());
+        }
+
+        [HttpPost]
+        public IActionResult CadastrarPedido(Pedido pedido)
+        {
+            _pedidoRepository.Cadastrar(pedido);
+            
+            _context.SaveChanges();
+
+            return Created();
         }
     }
 }

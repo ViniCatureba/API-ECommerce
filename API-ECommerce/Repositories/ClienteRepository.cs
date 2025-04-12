@@ -13,7 +13,9 @@ namespace API_ECommerce.Repositories
 
         // colocoar o o construtor (ctor) recebendo o context
 
-    //pega o context de fora e guarda nesse codigo
+        //pega o context de fora e guarda nesse codigo
+
+        //metodo contrutor ]e um metodo que tem o mesmo nome da classe (ctor)
         public ClienteRepository(EcommerceContext context)
         {
             _context = context;   

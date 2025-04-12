@@ -162,3 +162,8 @@ C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\bin\Debug\net9.0\runtimes\
 C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\obj\Debug\net9.0\API-ECommerce.csproj.AssemblyReference.cache
 C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\obj\Debug\net9.0\API-ECommerce.sourcelink.json
 C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\obj\Debug\net9.0\API-ECommerce.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vinic\Desktop\C#\API-ECommerce\API-ECommerce\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
