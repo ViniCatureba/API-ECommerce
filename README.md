@@ -1,4 +1,4 @@
-#Passo a passo API
+# Passo a passo API
 
 
 Primeiro criamos a Interface, sempre com o prefixo  I e no sufixo Repository
@@ -19,7 +19,7 @@ void Atualizar(int id, "ModelName" modelNome
 
 --------------------------------------------------------------------------------------
 
-Cria seu Repository
+# Crie seu Repository
 
 Com sufixo Repository
 
@@ -58,5 +58,5 @@ e retornar o codigo.
 
 
 -----------------------------------------------------------------------------------------------------
-Configurar o Swagger
+# Configurar o Swagger
 
