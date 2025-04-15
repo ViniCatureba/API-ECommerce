@@ -14,10 +14,9 @@ namespace API_ECommerce.Controllers
 
         private IPagamentoRepository _pagamentoRepository;
 
-        public PagamentoController(EcommerceContext context)
+        public PagamentoController(PagamentoRepository pagamentoRepository)
         {
-            _context = context;
-            _pagamentoRepository = new PagamentoRepository(_context);
+            _pagamentoRepository = pagamentoRepository;
         }
         [HttpGet()]
         public IActionResult ListarTodos()

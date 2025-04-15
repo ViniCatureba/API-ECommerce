@@ -18,11 +18,11 @@ namespace API_ECommerce.Controllers
 
        
         //controler
-        public ProdutoController(EcommerceContext context)
+        public ProdutoController(ProdutoRepository produtoRepository)
         {
-            _context = context;
-            _produtoRepository = new ProdutoRepository(_context);
-        }
+            //iNJEÇÃO DE DEPENDENCIAS
+            _produtoRepository = produtoRepository;
+                }
 
 
         // GET

@@ -4,29 +4,28 @@ using API_ECommerce.Models;
 
 namespace API_ECommerce.Repositories
 {
-    public class PedidoRepository : IPedidoRepository
+
+    public class ItemPedidoRepository : IItemPedidoRepository
     {
         private readonly EcommerceContext _context;
-        
-        public PedidoRepository(EcommerceContext context)
+
+        public ItemPedidoRepository (EcommerceContext context)
         {
             _context = context;
         }
+        public void Atualizar(int id, ItemPedido itemPedido)
+        {
+            _context.ItemPedidos.Add(itemPedido);
+        }
 
-        public void Atualizar(int id, Pedido pedido)
+        public ItemPedido BuscarPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Pedido BuscarPorId(int id)
+        public void Cadastrar(ItemPedido itemPedido)
         {
             throw new NotImplementedException();
-        }
-
-        public void Cadastrar(Pedido pedido)
-        {
-            _context.Pedidos.Add(pedido);
-            _context.SaveChanges();
         }
 
         public void Deletar(int id)
@@ -34,9 +33,9 @@ namespace API_ECommerce.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Pedido> ListarTodos()
+        public List<ItemPedido> ListarTodos()
         {
-            return _context.Pedidos.ToList();
+            return _context.ItemPedidos.ToList();
         }
     }
 }

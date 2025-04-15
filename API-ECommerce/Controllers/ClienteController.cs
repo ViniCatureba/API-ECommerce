@@ -20,10 +20,9 @@ namespace API_ECommerce.Controllers
 
         //Controller
         //Todo metodo contrutor tem que ter o mesmo nome da classe
-        public ClienteController(EcommerceContext context)
+        public ClienteController(ClienteRepository clienteRepository)
         {
-            _context = context;
-            _clienteRepository = new ClienteRepository(_context);
+            _clienteRepository = clienteRepository;
         }
         [HttpGet()]
         public IActionResult ListarTodos()
@@ -35,7 +34,7 @@ namespace API_ECommerce.Controllers
         public IActionResult CadastrarProduto(Cliente cliente)
         {
             _clienteRepository.Cadastrar(cliente);
-            _context.SaveChanges();
+            
             return Created();
         }
     }

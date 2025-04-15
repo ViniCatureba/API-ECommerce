@@ -14,10 +14,9 @@ namespace API_ECommerce.Controllers
         private readonly EcommerceContext _context;
         private IPedidoRepository _pedidoRepository;
 
-        public PedidoController(EcommerceContext context)
+        public PedidoController(PedidoRepository pedidoRepository)
         {
-            _context = context;
-            _pedidoRepository = new PedidoRepository(_context);
+            _pedidoRepository = pedidoRepository;
         }
         [HttpGet()]
         public IActionResult ListarTodos()
@@ -29,9 +28,6 @@ namespace API_ECommerce.Controllers
         public IActionResult CadastrarPedido(Pedido pedido)
         {
             _pedidoRepository.Cadastrar(pedido);
-            
-            _context.SaveChanges();
-
             return Created();
         }
     }
