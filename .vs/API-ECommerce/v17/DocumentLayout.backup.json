@@ -55,8 +55,7 @@
               "RelativeToolTip": "API-ECommerce\\Repositories\\ClienteRepository.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T00:26:49.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T00:26:49.982Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "API-ECommerce\\Models\\Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T00:26:14.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T00:26:14.135Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "API-ECommerce\\Controllers\\ItemPedidoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T23:25:01.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T23:25:01.571Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "API-ECommerce\\Controllers\\PagamentoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T23:01:26.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T23:01:26.132Z"
             }
           ]
         }

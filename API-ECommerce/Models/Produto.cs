@@ -20,4 +20,5 @@ public partial class Produto
     public string? Imagem { get; set; }
 
     public virtual ICollection<ItemPedido> ItemPedidos { get; set; } = new List<ItemPedido>();
+
 }

@@ -34,8 +34,34 @@ namespace API_ECommerce.Controllers
         public IActionResult CadastrarProduto(Cliente cliente)
         {
             _clienteRepository.Cadastrar(cliente);
-            
+                     
             return Created();
         }
+
+
+        // /api/cliente/vini@senai.com/senha12342
+        [HttpGet("{email}/{senha}")]
+        public IActionResult Login(string email, string senha)
+        {
+            var cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
+            if (cliente == null) { 
+            return NotFound();
+            }
+            return Ok(cliente);
+        }
+
+        [HttpGet("/buscar{nome}")]
+        public IActionResult BuscarPorNome(string nome)
+        {
+            return Ok(_clienteRepository.BuscarClientePorNome(nome));
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            return Ok(_clienteRepository.BuscarPorId(id));
+        }
+
+
     }
 }

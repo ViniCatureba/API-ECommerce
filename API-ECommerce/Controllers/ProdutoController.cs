@@ -1,4 +1,5 @@
 ﻿using API_ECommerce.Context;
+using API_ECommerce.DTO;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Models;
 using API_ECommerce.Repositories;
@@ -16,13 +17,13 @@ namespace API_ECommerce.Controllers
         //interface
         private IProdutoRepository _produtoRepository;
 
-       
+
         //controler
         public ProdutoController(ProdutoRepository produtoRepository)
         {
             //iNJEÇÃO DE DEPENDENCIAS
             _produtoRepository = produtoRepository;
-                }
+        }
 
 
         // GET
@@ -33,7 +34,7 @@ namespace API_ECommerce.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastrarProduto(Produto prod)
+        public IActionResult CadastrarProduto(CadastrarProdutoDTO prod)
         {
             //1 - Coloco o produto no banco de dados
             _produtoRepository.Cadastrar(prod);
@@ -42,6 +43,36 @@ namespace API_ECommerce.Controllers
             //3- Retorno o resultado
             //201 Created
             return Created();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Editar(int id, CadastrarProdutoDTO prod)
+        {
+            try
+            {
+                _produtoRepository.Atualizar(id, prod);
+                return Ok(prod);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
+        }
+
+
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                _produtoRepository.Deletar(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return NotFound("Produto nao encontrado!");
+            }
         }
     }
 }

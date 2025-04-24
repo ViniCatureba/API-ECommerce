@@ -1,4 +1,6 @@
-﻿using API_ECommerce.Models;
+﻿using API_ECommerce.DTO;
+using API_ECommerce.Models;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace API_ECommerce.Interfaces
 {
@@ -9,10 +11,16 @@ namespace API_ECommerce.Interfaces
         Cliente BuscarPorId(int id);
 
 
-        void Cadastrar(Cliente cliente);
+        void Cadastrar(CadastrarClientesDTO cliente);
 
-        void Atualizar(int id, Cliente cliente);
+        void Atualizar(int id, CadastrarClientesDTO cliente);
+
+
+        Cliente? BuscarPorEmailSenha(string email, string senha);
 
         void Deletar(int id);
+
+        List<Cliente> BuscarClientePorNome(string nome);
+
     }
 }

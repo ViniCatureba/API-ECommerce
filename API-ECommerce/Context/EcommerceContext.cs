@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using API_ECommerce.Models;
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace API_ECommerce.Context;
 
@@ -28,7 +30,7 @@ public partial class EcommerceContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer();
+        => optionsBuilder.UseSqlServer("");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -58,11 +60,11 @@ public partial class EcommerceContext : DbContext
 
             entity.ToTable("ItemPedido");
 
-            entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.ItemPedidos)
+            entity.HasOne(d => d.Pedido).WithMany(p => p.ItemPedidos)
                 .HasForeignKey(d => d.IdPedido)
                 .HasConstraintName("FK__ItemPedid__IdPed__66603565");
 
-            entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.ItemPedidos)
+            entity.HasOne(d => d.Produto).WithMany(p => p.ItemPedidos)
                 .HasForeignKey(d => d.IdProduto)
                 .HasConstraintName("FK__ItemPedid__IdPro__6754599E");
         });
@@ -81,7 +83,7 @@ public partial class EcommerceContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false);
 
-            entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.Pagamentos)
+            entity.HasOne(d => d.Pedido).WithMany(p => p.Pagamento)
                 .HasForeignKey(d => d.IdPedido)
                 .HasConstraintName("FK__Pagamento__IdPed__619B8048");
         });
