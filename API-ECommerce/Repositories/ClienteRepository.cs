@@ -2,6 +2,7 @@
 using API_ECommerce.DTO;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Models;
+using API_ECommerce.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace API_ECommerce.Repositories
@@ -22,7 +23,7 @@ namespace API_ECommerce.Repositories
         {
             _context = context;   
         }
-        public void Atualizar(int id, Cliente clienteNovo)
+        public void Atualizar(int id, CadastrarClientesDTO clienteNovo)
         {
             var clienteEncontrado = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
 
@@ -73,12 +74,17 @@ namespace API_ECommerce.Repositories
 
         public Cliente BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            var clienteId = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
+            if (clienteId == null)
+            {
+                throw new ArgumentException($"Cliente com ID ${id} nâo encontrado");
+            }
+            return clienteId;
         }
 
         public void Cadastrar(CadastrarClientesDTO dto)
         {
-            Cliente clienteCadastro = new Cliente
+            var clienteCadastro = new Cliente
             {
                 NomeCompleto = dto.NomeCompleto,
                 Email = dto.Email,
@@ -93,12 +99,27 @@ namespace API_ECommerce.Repositories
 
         public void Deletar(int id)
         {
-            _context.Clientes.ExecuteDelete();
+            var clienteEcontado = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
+
+            if (clienteEcontado == null)
+            {
+                throw new ArgumentException("Cliente nao encontrado");
+            }
+            _context.Clientes.Remove(clienteEcontado);
+            _context.SaveChanges();
         }
 
-        public List<Cliente> ListarTodos()
+        public List<ListarClienteViewModel> ListarTodos()
         {
-            return _context.Clientes.OrderBy(c => c.NomeCompleto).ToList();
+            //Select - Permite que eu selecione quais campos eu quero pegar
+            return _context.Clientes.Select(c => new ListarClienteViewModel
+            {
+                IdCliente = c.IdCliente,
+                NomeCompleto = c.NomeCompleto,
+                Email = c.Email,   
+                Telefone= c.Telefone,
+                Endereco = c.Endereco
+            }).ToList();
         }
 
 

@@ -1,4 +1,5 @@
 ﻿using API_ECommerce.Context;
+using API_ECommerce.DTO;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Models;
 
@@ -23,10 +24,40 @@ namespace API_ECommerce.Repositories
             throw new NotImplementedException();
         }
 
-        public void Cadastrar(Pedido pedido)
+        public void Cadastrar(CadastrarPedidoDTO pedidoDTO)
         {
-            _context.Pedidos.Add(pedido);
+            var cadastrarPedido = new Pedido
+            {
+                IdCliente = pedidoDTO.IdCliente,
+                DataPedido = pedidoDTO.DataPedido,
+                Status = pedidoDTO.Status,
+                ValorTotal = pedidoDTO.ValorTotal,
+            };
+            _context.Pedidos.Add(cadastrarPedido);
             _context.SaveChanges();
+
+            //Cadastrar o item pedido
+            //Para cada produto eu crio um item pedido
+
+            for (int i = 0; i < pedidoDTO.Produtos.Count; i++)
+            {
+                var produto = _context.Produtos.Find(pedidoDTO.Produtos[i]);
+
+                //TODO: Lancar erro se produto nao existe
+
+                var itemPedido = new ItemPedido
+                {
+                    IdPedido = cadastrarPedido.IdPedido,
+                    IdProduto = produto.IdProduto,
+                    Quantidade = 0
+                };
+                _context.ItemPedidos.Add(itemPedido);
+                _context.SaveChanges();
+            }
+            ;
+
+           
+
         }
 
         public void Deletar(int id)

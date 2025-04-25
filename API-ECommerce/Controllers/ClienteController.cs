@@ -5,6 +5,7 @@ using API_ECommerce.Controllers;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Repositories;
 using API_ECommerce.Models;
+using API_ECommerce.DTO;
 
 namespace API_ECommerce.Controllers
 {
@@ -24,6 +25,8 @@ namespace API_ECommerce.Controllers
         {
             _clienteRepository = clienteRepository;
         }
+
+
         [HttpGet()]
         public IActionResult ListarTodos()
         {
@@ -31,8 +34,9 @@ namespace API_ECommerce.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastrarProduto(Cliente cliente)
+        public IActionResult CadastrarCliente(CadastrarClientesDTO cliente)
         {
+
             _clienteRepository.Cadastrar(cliente);
                      
             return Created();
@@ -60,6 +64,14 @@ namespace API_ECommerce.Controllers
         public IActionResult BuscarPorId(int id)
         {
             return Ok(_clienteRepository.BuscarPorId(id));
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Deletar(int id)
+        {
+            _clienteRepository.Deletar(id);
+            return NoContent();
         }
 
 

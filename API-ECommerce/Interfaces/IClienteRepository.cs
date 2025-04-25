@@ -1,12 +1,13 @@
 ﻿using API_ECommerce.DTO;
 using API_ECommerce.Models;
+using API_ECommerce.ViewModels;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace API_ECommerce.Interfaces
 {
     public interface IClienteRepository
     {
-        List<Cliente> ListarTodos();
+        List<ListarClienteViewModel> ListarTodos();
 
         Cliente BuscarPorId(int id);
 
