@@ -2,6 +2,7 @@
 using API_ECommerce.DTO;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Models;
+using API_ECommerce.Services;
 using API_ECommerce.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +24,46 @@ namespace API_ECommerce.Repositories
         {
             _context = context;   
         }
+
+
+
+        // C - Create
+        public void Cadastrar(CadastrarClientesDTO dto)
+        {
+            var passwordService = new PasswordService();
+            
+            var clienteCadastro = new Cliente
+            {
+                NomeCompleto = dto.NomeCompleto,
+                Email = dto.Email,
+                Telefone = dto.Telefone,
+                Endereco = dto.Endereco,
+                DataCadastro = dto.DataCadastro
+
+            };
+
+            clienteCadastro.Senha = passwordService.HashPassword(clienteCadastro);
+            _context.Clientes.Add(clienteCadastro);
+            _context.SaveChanges();
+        }
+
+        // r - Read
+        public List<ListarClienteViewModel> ListarTodos()
+        {
+            //Select - Permite que eu selecione quais campos eu quero pegar
+            return _context.Clientes.Select(c => new ListarClienteViewModel
+            {
+                IdCliente = c.IdCliente,
+                NomeCompleto = c.NomeCompleto,
+                Email = c.Email,
+                Telefone = c.Telefone,
+                Endereco = c.Endereco
+            }).ToList();
+        }
+
+
+
+        // U - Update
         public void Atualizar(int id, CadastrarClientesDTO clienteNovo)
         {
             var clienteEncontrado = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
@@ -40,6 +81,23 @@ namespace API_ECommerce.Repositories
             _context.SaveChanges();
 
         }
+
+
+        // D - Delete
+        public void Deletar(int id)
+        {
+            var clienteEcontado = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
+
+            if (clienteEcontado == null)
+            {
+                throw new ArgumentException("Cliente nao encontrado");
+            }
+            _context.Clientes.Remove(clienteEcontado);
+            _context.SaveChanges();
+        }
+
+
+
 
         public List<Cliente> BuscarClientePorNome(string nome)
         {
@@ -62,65 +120,38 @@ namespace API_ECommerce.Repositories
         {
 
             //encontrar o cliente que possui o email e senha fornecidos
-            var clienteEncontrado = _context.Clientes.FirstOrDefault(cliente => cliente.Email == email && cliente.Senha == senha);
-
-            return clienteEncontrado;
-
-
-
-        }
-
-
-
-        public Cliente BuscarPorId(int id)
-        {
-            var clienteId = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
-            if (clienteId == null)
+            // Primeiro procuro pelo email
+            var clienteEncontrado = _context.Clientes.FirstOrDefault(cliente => cliente.Email == email );
+            if (clienteEncontrado == null)
             {
-                throw new ArgumentException($"Cliente com ID ${id} nâo encontrado");
+                return null;
             }
-            return clienteId;
+
+            var passwordService = new PasswordService();
+            //Verificar se a seha do usser gera o mesmo hash
+            var resultado = passwordService.VerificarSenha(clienteEncontrado, senha);
+
+            if (resultado == true) return clienteEncontrado;
+            return null;
+
+
+
         }
 
-        public void Cadastrar(CadastrarClientesDTO dto)
+
+
+        public ListarClienteViewModel BuscarPorId(int id)
         {
-            var clienteCadastro = new Cliente
-            {
-                NomeCompleto = dto.NomeCompleto,
-                Email = dto.Email,
-                Senha = dto.Senha,
-                Telefone = dto.Telefone,
-                Endereco = dto.Endereco,
-                DataCadastro = dto.DataCadastro
-
-            };
-            _context.Clientes.Add(clienteCadastro);
-        }
-
-        public void Deletar(int id)
-        {
-            var clienteEcontado = _context.Clientes.FirstOrDefault(c => c.IdCliente == id);
-
-            if (clienteEcontado == null)
-            {
-                throw new ArgumentException("Cliente nao encontrado");
-            }
-            _context.Clientes.Remove(clienteEcontado);
-            _context.SaveChanges();
-        }
-
-        public List<ListarClienteViewModel> ListarTodos()
-        {
-            //Select - Permite que eu selecione quais campos eu quero pegar
-            return _context.Clientes.Select(c => new ListarClienteViewModel
+            return _context.Clientes.Where(C => C.IdCliente == id).Select(c => new ListarClienteViewModel
             {
                 IdCliente = c.IdCliente,
                 NomeCompleto = c.NomeCompleto,
-                Email = c.Email,   
-                Telefone= c.Telefone,
+                Email = c.Email,
+                Telefone = c.Telefone,
                 Endereco = c.Endereco
-            }).ToList();
+            }).FirstOrDefault();
         }
+        
 
 
     }

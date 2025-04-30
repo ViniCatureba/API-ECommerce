@@ -6,6 +6,7 @@ using API_ECommerce.Interfaces;
 using API_ECommerce.Repositories;
 using API_ECommerce.Models;
 using API_ECommerce.DTO;
+using API_ECommerce.Services;
 
 namespace API_ECommerce.Controllers
 {
@@ -13,45 +14,81 @@ namespace API_ECommerce.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        //Context
-        private readonly EcommerceContext _context;
+        
         
         //Interface
         private IClienteRepository _clienteRepository;
 
+
+        //Instanciar o PasswordService
+        private PasswordService passwordService = new PasswordService();
+
+
         //Controller
         //Todo metodo contrutor tem que ter o mesmo nome da classe
-        public ClienteController(ClienteRepository clienteRepository)
+        public ClienteController(IClienteRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;
         }
 
 
-        [HttpGet()]
+
+
+        // C - Create
+        [HttpPost("Cadastrar")]
+        public IActionResult CadastrarCliente(CadastrarClientesDTO cliente)
+        {
+
+            _clienteRepository.Cadastrar(cliente);
+
+            return Created();
+        }
+
+
+
+        // R - Read
+        [HttpGet("ListarTodos")]
         public IActionResult ListarTodos()
         {
             return Ok(_clienteRepository.ListarTodos());
         }
 
-        [HttpPost]
-        public IActionResult CadastrarCliente(CadastrarClientesDTO cliente)
+        // U -Update
+        [HttpPut("Atualizar/{id}")]
+        public IActionResult Atualizar(int id, CadastrarClientesDTO clientes)
         {
-
-            _clienteRepository.Cadastrar(cliente);
-                     
-            return Created();
+            _clienteRepository.Atualizar(id, clientes);
+            return Ok();
         }
 
 
-        // /api/cliente/vini@senai.com/senha12342
-        [HttpGet("{email}/{senha}")]
-        public IActionResult Login(string email, string senha)
+
+        // D - Deletar
+        [HttpDelete("Deletar/{id}")]
+
+        public IActionResult Deletar(int id)
         {
-            var cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
+            _clienteRepository.Deletar(id);
+            return NoContent();
+        }
+
+
+
+
+        //Post para que nada seja passado via url
+        [HttpPost("login")]
+        public IActionResult Login(LoginDTO loginDto)
+        {
+            var cliente = _clienteRepository.BuscarPorEmailSenha(loginDto.Email, loginDto.Senha);
+
             if (cliente == null) { 
-            return NotFound();
+                return Unauthorized("Email ou senha invalidos!");
             }
-            return Ok(cliente);
+            var tokenService = new TokenService();
+
+            var token = tokenService.GenerateToken(cliente.Email);
+
+            return Ok(token);
         }
 
         [HttpGet("/buscar{nome}")]
@@ -60,19 +97,15 @@ namespace API_ECommerce.Controllers
             return Ok(_clienteRepository.BuscarClientePorNome(nome));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("BuscarPorId/{id}")]
         public IActionResult BuscarPorId(int id)
         {
             return Ok(_clienteRepository.BuscarPorId(id));
         }
 
-        [HttpDelete("{id}")]
+      
 
-        public IActionResult Deletar(int id)
-        {
-            _clienteRepository.Deletar(id);
-            return NoContent();
-        }
+        
 
 
     }

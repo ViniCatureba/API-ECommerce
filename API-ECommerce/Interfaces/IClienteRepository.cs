@@ -9,7 +9,7 @@ namespace API_ECommerce.Interfaces
     {
         List<ListarClienteViewModel> ListarTodos();
 
-        Cliente BuscarPorId(int id);
+        ListarClienteViewModel BuscarPorId(int id);
 
 
         void Cadastrar(CadastrarClientesDTO cliente);

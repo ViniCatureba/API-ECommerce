@@ -2,6 +2,7 @@
 using API_ECommerce.DTO;
 using API_ECommerce.Interfaces;
 using API_ECommerce.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_ECommerce.Repositories
 {
@@ -67,7 +68,7 @@ namespace API_ECommerce.Repositories
 
         public List<Pedido> ListarTodos()
         {
-            return _context.Pedidos.ToList();
+            return _context.Pedidos.Include(p => p.ItemPedidos).ThenInclude(p => p.Produto).ToList();
         }
     }
 }
